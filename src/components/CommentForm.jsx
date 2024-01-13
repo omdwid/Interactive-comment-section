@@ -19,7 +19,7 @@ function CommentForm({
       className={`flex gap-[10px] w-auto min-h-[150px] bg-[#f5f6fa] rounded-md p-6`}
     >
       <div
-        className={`image-container rounded-full bg-contain bg-[url(${userData.image.png})] w-[40px] h-[40px]`}
+        className={`image-container rounded-full bg-contain bg-[url(/public${userData.image.png})] w-[40px] h-[40px]`}
       ></div>
       <textarea
         onChange={handleChange}

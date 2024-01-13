@@ -4,7 +4,13 @@ import data from "../data.json";
 import NewCommentForm from "./components/NewCommentForm";
 import { useState } from "react";
 
+
 function App() {
+  const img = "bg-[url(/public/images/avatars/image-juliusomo.png)]";
+  const img1 = "bg-[url(/public/images/avatars/image-amyrobson.png)]";
+  const img2 = "bg-[url(/public/images/avatars/image-ramsesmiron.png)]";
+  const img3 = "bg-[url(/public/images/avatars/image-maxblagun.png)]";
+
   const [comments, setComments] = useState(data.comments);
 
   console.log("Comments logging ", comments);
@@ -27,27 +33,26 @@ function App() {
     });
   };
 
-  const changeScore = (commentId, num, replyId )=>{
-    setComments(prev => {
+  const changeScore = (commentId, num, replyId) => {
+    setComments((prev) => {
       return prev.map((comment) => {
-        if(comment.id === commentId){
-          if(replyId){
+        if (comment.id === commentId) {
+          if (replyId) {
             comment.replies = comment.replies.map((r) => {
-              if(r.id === replyId){
-                r.score += num
+              if (r.id === replyId) {
+                r.score += num;
               }
 
               return r;
-            })
-          }
-          else{
-            comment.score += num
+            });
+          } else {
+            comment.score += num;
           }
         }
         return comment;
-      })
-    })
-  }
+      });
+    });
+  };
 
   const editComment = (commentId, content) => {
     setComments((prev) => {
@@ -163,7 +168,7 @@ function CommentDiv({
   addReply,
   editComment,
   editReply,
-  changeScore
+  changeScore,
 }) {
   return (
     <div className="mb-[10px]">

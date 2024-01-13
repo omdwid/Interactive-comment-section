@@ -13,7 +13,7 @@ function CommentForm({
 
   return (
     <div
-      className={`sticky bottom-[3%] flex gap-[10px] w-auto min-h-[150px] bg-[#f5f6fa] rounded-md p-6`}
+      className={`flex gap-[10px] w-auto min-h-[150px] bg-[#f5f6fa] rounded-md p-6 mb-[10px]`}
     >
       <div
         className={`image-container rounded-full bg-contain bg-[url(/public${userData.image.png})] w-[40px] h-[40px]`}

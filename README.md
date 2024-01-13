@@ -2,7 +2,7 @@
 
 This is interactive comment section website with CRUD functionality to the comments as well as upvote functionality
 
-- [Website link](https://6597bb640537cf9725e738e5--lovely-puppy-e73722.netlify.app/)
+- [Website link](https://nimble-malabi-6b19f9.netlify.app/)
 
   
 ## Images
